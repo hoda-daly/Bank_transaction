@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Bank/style.css" />
+    <link
+      rel="shortcut icon"
+      type="images/jpg"
+      href="../Bank/images.jpg"
+    />
+    <title>BankApp</title>
+    <script src="../Bank/main.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <p class="welcome">Login to Get Start</p>
+      <img src="../Bank/Savings-amico.png" alt="logo" class="logo" />
+      <form action="">
+        <input
+          type="text"
+          placeholder="User"
+          class="login__input login__input--user"
+        />
+        <input
+          type="text"
+          placeholder="PIN"
+          class="login__input login__input--pin"
+          maxlength="4"
+        />
+        <button class="login__btn">&rarr;</button>
+      </form>
+    </nav>
+
+    <main class="App">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div>
+          <p class="balance__label">Current Balance</p>
+          <p class="balance__date">
+            As of<span class="date"> 05/03/2024</span>
+          </p>
+        </div>
+        <p class="balance__value">0000💲</p>
+      </div>
+      <!-- movements -->
+      <div class="movements">
+        <div class="movements__row">
+          <div class="movements__type movements__type--deposit">2 deposit</div>
+          <div class="movements__date">3 days ago</div>
+          <div class="movements__value">4 000€</div>
+        </div>
+        <div class="movements__row">
+          <div class="movements__type movements__type--withdrawal">
+            1 withdrawal
+          </div>
+          <div class="movements__date">24/01/2037</div>
+          <div class="movements__value">-378€</div>
+        </div>
+      </div>
+      <!-- SUMMARY -->
+      <div class="summary">
+        <div class="summary__label">In</div>
+        <div class="summary__value summary__value--in">0000💲</div>
+        <div class="summary__label">Out</div>
+
+        <div class="summary__value summary__value--out">0000 💲</div>
+        <div class="summary__label">Interest</div>
+
+        <div class="summary__value summary__value--interest">0000 💲</div>
+        <button class="summary__btn--sort">&darr; Sort</button>
+      </div>
+
+      <!--transfer operation -->
+      <div class="operation operation--transfer">
+        <h1>Transfer money</h1>
+        <form action="" class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="text" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label for="" class="form__label">Transfer to</label>
+          <label for="" class="form__label">Amount</label>
+        </form>
+      </div>
+      <!-- loan -->
+      <div class="operation operation--loan">
+        <h1>Request loan</h1>
+        <form action="" class="form form--loan">
+          <input type="text" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label for="" class="form__label form__label--loan">Amount</label>
+        </form>
+      </div>
+      <!-- close account -->
+      <div class="operation operation--close">
+        <h1>Close account</h1>
+        <form action="" class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input type="text" class="form__input form__input--pin" />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label for="" class="form__label">Confirm user</label>
+          <label for="" class="form__label">Confirm PIN</label>
+        </form>
+      </div>
+      <div class="logout">
+        <h3>You will be logged out in <span class="timer">05:00</span></h3>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        BankApp © 2024 All Rights Reserved at <span>Hoda Eldaly</span>
+      </p>
+    </footer>
+  </body>
+</html>

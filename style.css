@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 59, 83, 0.838),
+    rgba(0, 0, 0, 0.777)
+  );
+  /* height: 100vh; */
+  padding: 2rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0, 2rem;
+}
+nav img {
+  width: 10rem;
+  height: 10rem;
+}
+.welcome {
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+}
+.login {
+  display: flex;
+}
+.login__input {
+  margin: 0 2rem;
+  height: 4rem;
+  width: 12rem;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bolder;
+  background-color: #ffffffe0;
+  transition: all 0.3s;
+}
+.login__input:focus {
+  box-shadow: 0 0 10px #fff;
+}
+.login__btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+.App {
+  position: relative;
+  max-width: 100rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 4rem;
+
+  /* NOTE This creates the fade in/out anumation */
+  opacity: 0;
+  transition: all 1s;
+  background-color: rgba(5, 7, 1, 0.392);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+}
+.balance {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  margin: 5rem;
+  /* background-color: aqua; */
+}
+.balance__date {
+  margin-top: 2rem;
+}
+.movements {
+  grid-row: 2 / span 3;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: scroll;
+  margin-left: 1rem;
+}
+.movements__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.movements__type {
+  width: fit-content;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 1px 10px;
+  text-align: center;
+  color: #eee;
+  margin-right: 3rem;
+  box-shadow: 9px 11px 13px 0px rgba(0, 0, 0, 0.1);
+}
+.movements__type--deposit {
+  background-color: rgb(50, 104, 0);
+}
+.movements__type--withdrawal {
+  background-color: rgb(195, 2, 47);
+}
+.movements__value {
+  font-size: 1.7rem;
+  margin-left: auto;
+}
+
+.summary {
+  grid-row: 5 / 6;
+  display: flex;
+  align-items: baseline;
+  margin: 10px;
+  padding: 10px;
+  gap: 1.3rem;
+}
+.summary__label {
+  font-size: 2rem;
+  color: white;
+}
+.summary__value {
+  font-size: 2rem;
+}
+.summary__value--in {
+  color: rgb(50, 104, 0);
+}
+.summary__value--out {
+  color: rgb(195, 2, 47);
+}
+.summary__value--interest {
+  color: rgb(50, 104, 0);
+}
+.summary__btn--sort {
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-left: auto;
+  transition: all 0.3s;
+}
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem 1rem;
+}
+.operation {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #ffffff;
+  margin-right: 2rem;
+}
+.operation h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.operation--transfer {
+  background-color: rgb(215, 149, 5);
+}
+.operation--loan {
+  background-color: rgb(38, 156, 2);
+}
+.operation--close {
+  background-color: rgb(199, 7, 39);
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+  outline: none;
+}
+.form__label {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.form.form--loan {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+.form__label--loan {
+  grid-row: 2;
+}
+.form__btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 2rem;
+  text-align: center;
+}
+.logout {
+  color: tomato;
+  margin-top: 2.9rem;
+  text-align: right;
+  padding: 0 0.5rem;
+}
+footer {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+footer span {
+  color: tomato;
+  font-size: 2rem;
+  font-weight: 900;
+}
